@@ -1,0 +1,241 @@
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  background: rgb(220, 220, 220);
+  font-family: georgia, times, serif;
+  margin: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, h4 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+h1, h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 11px;
+}
+
+.content {
+  background: rgb(200, 200, 200);
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+p {
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.content section {
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  margin-bottom: 24px;
+}
+
+.content section:last-of-type {
+  border-bottom-width: 0;
+}
+
+.book-image {
+  background: url('http://placehold.it/120x170');
+  width: 120px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+h4.price:after {
+  content: '/mo';
+}
+
+.purchase-button {
+  text-align: center;
+}
+
+a.button {
+  display: inline-block;
+  padding: 13px 0;
+  width: 240px;
+  background: rgb(111, 111, 111);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgb(20, 20, 20);
+  border-radius: 2px 2px 5px 5px;
+}
+
+.left {
+  float: inherit;
+  margin: 0 auto;
+  width: 180px;
+}
+
+blockquote.social-proof {
+  display: none;
+}
+
+.what-you-get .item {
+  text-align: center;
+  margin: 0 19px 24px;
+  padding-bottom: 13px;
+  border-bottom: 1px dotted rgb(40, 40, 40);
+}
+
+.what-you-get .item:last-of-type {
+  border-bottom-width: 0;
+}
+
+.item img {
+  margin-bottom: 8px;
+}
+
+.item h4, .item p {
+  margin: 6px;
+}
+
+.item p {
+  font-size: .8rem;
+}
+
+.pricing {
+  margin-bottom: 40px;
+}
+
+.pricing h3 {
+  padding: 0 8px;
+}
+
+.pricing h4 {
+  margin: 0;
+}
+
+.pricing ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.pricing li {
+  background: rgb(100, 230, 10);
+  margin: 0;
+  padding: 12px 8px;
+  border-bottom: 1px solid gray;
+}
+
+@media only screen and (min-width: 680px) {
+  .content {
+    width: 510px;
+    margin: 32px auto;
+  }
+
+  .content .book-image {
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 8px;
+  }
+
+  .right {
+    float: right;
+    margin-left: 32px;
+    margin-bottom: 8px;
+  }
+
+  blockquote.social-proof {
+    display: inherit;
+    width: 660px;
+    margin: 0 auto 32px;
+  }
+
+  span.quotation-mark {
+    font-size: 5rem;
+    color: rgb(10, 220, 80);
+    float: left;
+    margin-right: 22px;
+    margin-top: 8px;
+  }
+
+  .social-proof .quote {
+    float: left;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    width: 560px;
+  }
+
+  .social-proof cite {
+    font-size: .9rem;
+    font-style: italic;
+    float: right;
+  }
+
+  .what-you-get {
+    width: 680px;
+    margin: 0 auto;
+  }
+
+  .what-you-get .item {
+    width: 308px;
+    margin: 16px;
+    float: left;
+    border-bottom-width: 0;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  h4.price:after {
+    content: ' each month';
+  }
+
+  .pricing {
+    width: 765px;
+    margin: 0 auto 2rem;
+  }
+
+  li.package {
+    float: left;
+    width: 255px;
+    border-bottom-width: 0;
+    text-align: center;
+  }
+
+  li.package:nth-of-type(2) {
+    margin-top: .2rem;
+    z-index: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    background: rgb(71, 167, 5);
+    box-shadow: 0 3px 3px 1px rgb(42, 90, 9);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 935px;
+  }
+
+  .book-image {
+    background: url('http://placehold.it/240x340');
+    width: 240px;
+    height: 340px;
+  }
+
+  .what-you-get {
+    width: 1020px;
+    margin: 0 auto;
+  }
+}
