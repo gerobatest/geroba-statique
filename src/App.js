@@ -4,8 +4,6 @@ import SectionSolution from './components/SectionSolution';
 import SectionComment from './components/SectionComment';
 import SectionFonc from './components/SectionFonc';
 import SectionTelechargement from './components/SectionTelechargement';
-import Troisdtel from './components/Troisdtel';
-//import AppSlide from './components/AppSlide';
 import SectionDemo from './components/SectionDemo';
 import Footer from './components/Footer';
 import Fill from './components/Fill';
@@ -21,8 +19,6 @@ function App(){
             <SectionFonc title="Fonctionnalités"/>
           </ParallaxProvider>
           <SectionTelechargement/>  
-          <Troisdtel/>
-          {/* <AppSlide/> */}
           <SectionDemo/> 
           <Footer/>
           <Fill/>

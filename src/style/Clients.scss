@@ -47,6 +47,12 @@
     }
 }
 
+@include mediaXs{
+    .cards{
+        width:85%;
+    }
+}
+
 
 
 

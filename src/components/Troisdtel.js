@@ -9,17 +9,20 @@ import docData from './Document-data';
 const Troisdtel = function() {
 
     const slideLength = docData.length; 
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(slideLength); //cibler l'index du
+    //dernier élément du tableau
 
-    let deg = 0;
-    let nElements;
+    var deg = 0;
 
+    var span = document.querySelectorAll('.box span');
+    var nElements = span.length;
+   
     window.onresize = () =>{
         responsiveDisplay(); 
     }
 
     useEffect(() =>{
-        setCurrentSlide(0);
+        setCurrentSlide(slideLength - 1);
     }, [])
 
     useEffect(() => {
@@ -37,36 +40,45 @@ const Troisdtel = function() {
         else if(window.innerWidth >= 700)
             z = 180; 
 
-        const span = document.querySelectorAll('.box span');
-
-        nElements = span.length;
-
         span.forEach((element, i) => {
             const valeur = (360/ nElements) * (i+1);
             element.style.transform = 'rotateY('+ valeur +'deg) translateZ(' + z + 'px)';
-        });
-
-        
+        });      
     }
 
-    function clickButtonLeftD(){
-        
-        deg -= 360/ nElements; 
+    /*wwcasync function setLeftActive(){
+        await clickButtonLeftD();
+        setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+    }*/
+
+    async function clickButtonLeftD(){
+        //await setLeftActive();
+        deg = deg - (360/ nElements); 
+
+        console.log(nElements);
+        console.log(deg);
+
         const boxx = document.querySelector('.box');
         boxx.style.transform = 'perspective(1000px) rotateY(' + deg +'deg)';
+        //setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+    }
+
+
+    /*async function setRightActive(){
         setCurrentSlide(currentSlide === 0 ? slideLength -1 : currentSlide -1);
+    }*/
 
-        //specifier la classe active ici
+    async function clickButtonRightD(){
+        //await setRightActive();
+        deg = deg + (360/ nElements); 
 
-    }
+        console.log(nElements);
+        console.log(deg);
 
-    function clickButtonRightD(){
-  
-        deg += 360/ nElements; 
         const boxx = document.querySelector('.box');
-        boxx.style.transform = 'perspective(1000px) rotateY('+deg+'deg)';
-        setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+        boxx.style.transform = 'perspective(1000px) rotateY('+ deg +'deg)';    
     }
+
     
 
     return (
@@ -76,9 +88,10 @@ const Troisdtel = function() {
 
                 {/* Les documents */}
                 {docData.map((slide, index) =>{
+                    //setCurrentSlide = index?
                     return(     
                         <>
-                            <span className={`documents ${currentSlide === index ? 'current':''} `} id={index} key = {index}>
+                            <span className="documents" id={index} key={index}>
                                 <a href={slide.document} target="_blank" rel="noreferrer">
                                     <img src = {slide.image}  alt={slide.name} title={slide.name}/> 
                                     </a>    
@@ -87,6 +100,7 @@ const Troisdtel = function() {
                         </>    
                     ) 
                 })}
+                
 
             </div>
 

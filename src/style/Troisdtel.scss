@@ -41,6 +41,10 @@
         &:hover{
           transform:scale(1.09);
         }
+
+        &:hover .fileName{
+          display: block;
+        }
       }
     }
   }
@@ -102,7 +106,6 @@
 //Le nom n'apparaît que pour le document au milieu
 .documents{ //ou span
   &.current{
-    background:pink;
     .fileName{
       display: block;
     }

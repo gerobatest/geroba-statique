@@ -1,9 +1,10 @@
 import React from 'react'
 import '../style/Section.scss'
-//import slider from "../images/slider.jpg";
+import Troisdtel from "./Troisdtel";
 
 function SectionTelechargement() {
   return( 
+        <>
             <div className="container-telechargement" id="téléchargement">     
                 <h1 className="title titleTelechargement" >Téléchargements</h1>
                 <div className="sm-container">
@@ -24,7 +25,11 @@ function SectionTelechargement() {
                 </div>
                 <div className="slider-telechargement">                 
                 </div>
+                
+                <Troisdtel/>
             </div>
+            
+        </>
   )
 }
 

@@ -47,7 +47,6 @@
             transition: 1s ease text-decoration;
 
             &.active{
-              color: $orange;
               text-decoration: underline;
               text-decoration-color: $orange;
             }
@@ -59,7 +58,6 @@
             }  
         }  
         .active{
-          color: $orange;
           text-decoration: underline;
           text-decoration-color: $orange;
         }
