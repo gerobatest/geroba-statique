@@ -136,7 +136,7 @@ const Existant  = ({ content,limit}) => {
              <div className="sectionContainer" id="fonctions">
                 <div className="sectionImage">
                     <Parallax translateX={['-200px', '100px']}>    
-                        <img src="/engineer.png" alt="Construction worker"/>
+                        <img src="/engineer.avif" alt="Construction worker"/>
                     </Parallax>  
                 </div>
                 <div className="sectionText">

@@ -91,7 +91,7 @@ const SectionText = (props) => {
             {/* Image avec Parallax */}
             <div className="sectionImage">
               <Parallax translateX={['-200px', '40px']}>     
-                <img className="iMac" src="imac.png" alt="iMac"/>
+                <img className="iMac" src="imac.avif" alt="iMac"/>
               </Parallax>      
             </div>
 

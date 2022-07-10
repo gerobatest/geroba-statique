@@ -38,7 +38,7 @@ const iconStyle = new Style({
     anchor: [0.5, 46],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '/location.png',
+    src: '/location.avif',
     scale: 1.5
   }),
 });

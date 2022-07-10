@@ -5,37 +5,37 @@ const ClientData = [
   {
     id: uuidv4(),
     title: "Le Port",
-    imgPath: "/Le-Port.png"
+    imgPath: "/Le-Port.avif"
   },
   {
     id: uuidv4(),
     title: "Ville des Trois-Ilets",
-    imgPath: "/ilets.png"
+    imgPath: "/ilets.avif"
   },
   {
     id: uuidv4(),
     title: "Nord",
-    imgPath: "/Nord.png"
+    imgPath: "/Nord.avif"
   },
   {
     id: uuidv4(),
     title: "Communauté de communes",
-    imgPath: "/ardennes.jpg"
+    imgPath: "/ardennes.avif"
   },
   {
     id: uuidv4(),
     title: "Ville de Baie-Mahault Guadeloupe Ardenne rives de meuse",
-    imgPath: "/baie-mahault.png"
+    imgPath: "/baie-mahault.avif"
   },
   {
     id: uuidv4(),
     title: "Cirest",
-    imgPath: "/cirest.png"
+    imgPath: "/cirest.avif"
   },
   {
     id: uuidv4(),
     title: "Saint Michel sur Orge",
-    imgPath: "Saint-Michel-sur-Orge.png"
+    imgPath: "Saint-Michel-sur-Orge.avif"
   }
 ];
 

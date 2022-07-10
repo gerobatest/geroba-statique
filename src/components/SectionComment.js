@@ -45,7 +45,7 @@ function SectionComment() {
 
             <div className="sectionImage">
                 <Parallax translateX={['200px', '-40px']}> 
-                    <img src="/tablette.png" alt="Tablette avec carte"/>
+                    <img src="/tablette.avif" alt="Tablette avec carte"/>
                 </Parallax>
             </div>
         </div>
