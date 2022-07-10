@@ -1,5 +1,4 @@
 import React from 'react'
-import tablette from '../images/tablette.png'
 import { Parallax } from 'react-scroll-parallax';
 
 function SectionComment() {
@@ -46,7 +45,7 @@ function SectionComment() {
 
             <div className="sectionImage">
                 <Parallax translateX={['200px', '-40px']}> 
-                    <img src={tablette} alt="Tablette avec carte"/>
+                    <img src="/tablette.png" alt="Tablette avec carte"/>
                 </Parallax>
             </div>
         </div>

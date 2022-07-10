@@ -77,7 +77,7 @@
     .compte{
         display:flex;
         text-align:center;
-        width: 18%; //
+        width: 18%; 
         justify-content: space-between;
 
         &:hover{
@@ -496,26 +496,41 @@
   }
 }
 
-@include mediaLg{
-  //
-}
-
 //Ecran large 
 @include mediaXl{
   .header{
     .nav{
-      height: $headerXl; //CHANGEMENT 
+      height: $headerXl;
       .navcont{
         .items{
-          font-size:18px;
+          font-size: $fontsizeLg;
         }
       }
       .compte{
-        width:15%;
+        width:18%;
         .btn-login{
           margin-right:20px; //VALEUR:marge: alternative? 
           font-size:18px;
         }
+      }
+    }
+  }
+}
+
+//Ecran extra-large
+@include mediaXxl{
+  .nav{
+    height: $headerXl; 
+    .navcont{
+      .items{
+        font-size: $fontsizeXl;
+      }
+    }
+    .compte{
+      width:15%;
+      .btn-login{
+        margin-right:20px; //VALEUR:marge: alternative? 
+        font-size: $fontsizeXl;
       }
     }
   }

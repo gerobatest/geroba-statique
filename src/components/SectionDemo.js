@@ -90,6 +90,7 @@ function SectionDemo() {
             <Slider {...settings}>
               {ClientData.map((item) => (
               <div key="item" className="card"> 
+                
                 <img className="clientLogo" src={item.imgPath} alt={item.title} title={item.title}/>
               </div>
               ))}

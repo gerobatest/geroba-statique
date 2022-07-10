@@ -36,16 +36,6 @@
             }
         }
     }
-
-    /*TEST UNIQUEMENT 
-    //Pour chaque section de text à droite
-    .sectionText:nth-of-type(even), .sectionImage:nth-of-type(even){
-      //background:rgb(183, 219, 183);  
-    }
-    //Pour chaque section à gauche
-    .sectionText:nth-of-type(odd), .sectionImage:nth-of-type(odd){
-        //background: rgb(185, 160, 164);
-    }*/
 }
 
 
@@ -53,6 +43,7 @@
 //Téléchargement
 .container-telechargement{ 
     margin-top: $paddingSectionLg !important;
+    padding-top: 20px;
     background: $sectiongreybg;
     .titleTelechargement{
         padding-left:3%;
@@ -147,10 +138,28 @@
             }
         }
         .sectionImage{
-            //??height:50%; 
             margin:auto;
         }
     } 
+}
+
+@include mediaXxl{
+    .sectionContainer{
+        .sectionText{
+            width:50%; 
+            li{
+                font-size: $fontsizeXxl;
+                line-height: $lineheightXxl;
+            }
+        }
+        .sectionImage{
+            img{
+                width:65%; 
+                height:65%;
+                object-fit: contain;
+            }
+        }       
+    }
 }
 
 

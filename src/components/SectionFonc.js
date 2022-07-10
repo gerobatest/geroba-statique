@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import '../style/Section.scss';
 import '../style/Modal.scss';
-import worker from '../images/engineer.png';
 import { Parallax } from 'react-scroll-parallax';
 import { HiOutlineX } from "react-icons/hi";
 
@@ -137,7 +136,7 @@ const Existant  = ({ content,limit}) => {
              <div className="sectionContainer" id="fonctions">
                 <div className="sectionImage">
                     <Parallax translateX={['-200px', '100px']}>    
-                        <img src={worker} alt="Construction worker"/>
+                        <img src="/engineer.png" alt="Construction worker"/>
                     </Parallax>  
                 </div>
                 <div className="sectionText">
@@ -211,113 +210,6 @@ const Existant  = ({ content,limit}) => {
                     </p>
                 </div>
             </div>
-
-
-            {/* <Modal 
-                function="toggleModal1"
-                img="/etape-1.jpg" 
-                title="Etape 1" 
-                mode="Existant" 
-                texte1="C’est ce qui existe sur le terrain, l’état « 0 ».
-                    Suspendisse potenti. Proin elementum erat vitae
-                    dictum aliquet. Aenean porta posuere mi, ut
-                    hendrerit arcu malesuada a. Etiam et porttitor
-                    turpis. Aenean efficitur id nisl sed ultrices.
-                    Suspendisse porttitor mollis ornare. " 
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    rutrum a, condimentum sit amet orci. Nulla
-                    facilisi."
-            />
-
-
-            <Modal 
-                function="toggleModal2"
-                img="/etape-2.jpg" 
-                title="Etape 2" 
-                mode="Etude" 
-                texte1="Il s’agit du fruit de l’expertise de l’existant et la
-                    définition de ce qu’il devrait y avoir. Dictum
-                    aliquet. Aenean porta posuere mi, ut hendrerit
-                    arcu malesuada a. Etiam et porttitor turpis.
-                    Aenean efficitur id nisl sed ultrices. Suspendisse
-                    porttitor mollis ornare. " 
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    rutrum a, condimentum sit amet orci. Nulla
-                    facilisi."
-            />
-
-            
-            <Modal 
-                function="toggleModal3"
-                img="/etape-3.jpg" 
-                title="Etape 3" 
-                mode="Dépôts" 
-                texte1="Pour les objets qui le nécessitent, c’est la gestion
-                    des équipements qui sont dans des dépôts
-                    localisés et qui serviront à des travaux de
-                    maintenance."
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    condimentum sit amet orci. Nulla facilisi."
-            />
-
-
-            <Modal 
-                function="toggleModal4"
-                img="/etape-4.jpg" 
-                title="Etape 4" 
-                mode="Travaux" 
-                texte1="La maîtrise d’ouvrage décide d’engager des
-                    travaux de changement ou de maintenance ; elle
-                    confie une mission à une entreprise ou en régie
-                    et le maître d’oeuvre va suivre les actions, pas à
-                    pas suivant le détail, modulable, défini en amont."
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    rutrum a, condimentum sit amet orci. Nulla
-                    facilisi."
-            />
-
-            <Modal 
-                function="toggleModal5"
-                img="/etape-5.jpg" 
-                title="Etape 5" 
-                mode="Gestion" 
-                texte1="Le patrimoine doit être surveillé à la fois sur le
-                    plan physique et fonctionnel. Des actions de
-                    surveillances sont définies sur tout ou une partie
-                    du patrimoine et les éventuels besoins
-                    d’intervention identifiés puis suivis."
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    rutrum a, condimentum sit amet orci. Nulla
-                    facilisi."
-            />
-
-            <Modal 
-                function="toggleModal6"
-                img="/etape-6.jpg" 
-                title="Etape 6" 
-                mode="Route et Bâtiment" 
-                texte1="C’est ce qui existe sur le terrain, l’état « 0 ».
-                    Suspendisse potenti. Proin elementum erat vitae
-                    dictum aliquet. Aenean porta posuere mi, ut
-                    hendrerit arcu malesuada a. Etiam et porttitor
-                    turpis. Aenean efficitur id nisl sed ultrices.
-                    Suspendisse porttitor mollis ornare."
-                texte2="Mauris pharetra porttitor ipsum ac lobortis.
-                    Donec sed condimentum erat. Nullam pretium
-                    rutrum finibus. Pellentesque dui urna, luctus at
-                    rutrum a, condimentum sit amet orci. Nulla
-                    facilisi."
-            /> */}
 
         </>   
   )

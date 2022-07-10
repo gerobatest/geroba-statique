@@ -175,8 +175,7 @@
       width:100px;
       line-height:100px;
       h1{
-        font-size:100px; /*TBD*/
-        text-shadow:0.5px 0.5px $grey;
+        font-size:100px; /*TBD*/     
       }    
     }
     .container-dots{
@@ -184,6 +183,29 @@
       .dot{
         width: 23px;
         height: 23px;
+      }
+    }
+  }
+}
+
+@include mediaXxl{
+  .slider{
+    width:100%;
+    .textslide{
+      position: absolute;
+      right: 800px;
+      bottom: 280px;
+      width:100px;
+      line-height:150px;
+      h1{
+        font-size:150px; /*TBD*/
+      }    
+    }
+    .container-dots{
+      bottom:100px;
+      .dot{
+        width: 25px;
+        height: 25px;
       }
     }
   }

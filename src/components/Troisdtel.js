@@ -95,7 +95,7 @@ const Troisdtel = function() {
                                 <a href={slide.document} target="_blank" rel="noreferrer">
                                     <img src = {slide.image}  alt={slide.name} title={slide.name}/> 
                                     </a>    
-                                    <p className="fileName"> {slide.name}</p>     
+                                    {/* <p className="fileName"> {slide.name}</p>      */}
                             </span>  
                         </>    
                     ) 
@@ -111,7 +111,6 @@ const Troisdtel = function() {
   );
 }
 export default Troisdtel;
-
 
 
 

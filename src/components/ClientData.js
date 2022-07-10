@@ -9,13 +9,13 @@ const ClientData = [
   },
   {
     id: uuidv4(),
-    title: "Nord",
-    imgPath: "/Nord.png"
+    title: "Ville des Trois-Ilets",
+    imgPath: "/ilets.png"
   },
   {
     id: uuidv4(),
-    title: "Ville des Trois-Ilets",
-    imgPath: "/ilets.png"
+    title: "Nord",
+    imgPath: "/Nord.png"
   },
   {
     id: uuidv4(),
@@ -29,13 +29,13 @@ const ClientData = [
   },
   {
     id: uuidv4(),
-    title: "Saint Michel sur Orge",
-    imgPath: "Saint-Michel-sur-Orge.png"
+    title: "Cirest",
+    imgPath: "/cirest.png"
   },
   {
     id: uuidv4(),
-    title: "Cirest",
-    imgPath: "/cirest.png"
+    title: "Saint Michel sur Orge",
+    imgPath: "Saint-Michel-sur-Orge.png"
   }
 ];
 

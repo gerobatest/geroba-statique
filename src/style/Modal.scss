@@ -62,6 +62,24 @@ body .active-modal {
     }  
 }
 
+@include mediaXs{
+    .PopUp{
+        width:95%;
+    }
+}
+
+@include mediaSm{
+    .PopUp{
+        width:95%;
+    }
+}
+
+@include mediaMd{
+    .PopUp{
+        width: 90%;
+    }
+}
+
 
 
 

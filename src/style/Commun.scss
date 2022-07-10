@@ -75,3 +75,14 @@ p{
         line-height: $lineheightXl;
     }
 } 
+
+@include mediaXxl{
+    .container{
+        width: 2560px;
+        margin:0 auto;
+    }
+    p{
+        font-size: $fontsizeXxl;
+        line-height: $lineheightXxl;
+    }
+}

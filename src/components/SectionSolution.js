@@ -4,7 +4,6 @@ import {sliderData} from "./data-slider";
 import '../style/Commun.scss';
 import '../style/Section.scss'; 
 import '../style/Slider.scss';
-import iMac from '../images/imac.png';
 import { Parallax } from 'react-scroll-parallax';
 
 const SectionText = (props) => {
@@ -92,7 +91,7 @@ const SectionText = (props) => {
             {/* Image avec Parallax */}
             <div className="sectionImage">
               <Parallax translateX={['-200px', '40px']}>     
-                <img className="iMac" src={iMac} alt="iMac"/>
+                <img className="iMac" src="imac.png" alt="iMac"/>
               </Parallax>      
             </div>
 

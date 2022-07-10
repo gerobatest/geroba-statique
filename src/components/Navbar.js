@@ -2,7 +2,6 @@ import React, {useState, useEffect}  from 'react'
 import {Link} from 'react-scroll'
 import '../style/Navbar.scss'
 import './../style/Navbar.scss'
-import logos from './../images/logo-geroba.png'
 import {FaLinkedinIn, FaUserAlt} from 'react-icons/fa'
 import {BsArrowUpCircleFill} from 'react-icons/bs'
 
@@ -48,7 +47,7 @@ const Navbar = () => {
 
                     <nav className={`nav ${showLinks? "show-nav" : "hide-nav"}`}>
                         <div className='logo'>
-                            <Link to="/#" onClick={() => window.location.reload()} ><img src={logos} className="geroba" alt="logo"></img></Link>
+                            <Link to="/#" onClick={() => window.location.reload()} ><img src="/logo-geroba.png" className="geroba" alt="logo"></img></Link>
                           
                             <button className='navbar_burger' onClick={handleShowLink}>
                                 <span className='burger-bar'></span>

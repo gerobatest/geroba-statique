@@ -13,15 +13,17 @@ function App(){
   return (
       <>
           <Navbar/> 
-          <ParallaxProvider> 
-            <SectionSolution title="Solution de mobilité"/>
-            <SectionComment/>
-            <SectionFonc title="Fonctionnalités"/>
-          </ParallaxProvider>
-          <SectionTelechargement/>  
-          <SectionDemo/> 
+          <div className = "container">
+            <ParallaxProvider> 
+              <SectionSolution title="Solution de mobilité"/>
+              <SectionComment/>
+              <SectionFonc title="Fonctionnalités"/>
+            </ParallaxProvider>
+            <SectionTelechargement/>  
+            <SectionDemo/>  
           <Footer/>
           <Fill/>
+          </div>
       </>
     );
 }

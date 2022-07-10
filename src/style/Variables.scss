@@ -16,6 +16,7 @@ $lineheightSm:20px;
 $lineheightMd:22px;
 $lineheightLg:24px;
 $lineheightXl:38px;
+$lineheightXxl: 42px;
 
 //Dimension titre pour chaque type d'écran
 $titleXl:70px;
@@ -28,6 +29,7 @@ $fontsizeSm: 14px; //Mobile
 $fontsizeMd: 16px; //iPad Air
 $fontsizeLg: 17px; //Desktop
 $fontsizeXl: 24px; //Large screens 
+$fontsizeXxl: 30px;
 
 $paddingSectionLg: 60px;
 
@@ -39,20 +41,6 @@ $spacing-lg: 20px;
 //bar de navigation 
 $header-height: 55px;
 $headerXl: 90px;
-
-/*breakpoints : passage entre différentes types d'écran
-$sm: 37.5em;
-$md: 48em;
-$lg: 64em;
-$xl: 75em;*/
-
-@mixin breakpoint($point){
-    @if $point == md {
-        @media (min-width: $md){
-            @content;
-        }
-    }
-};
 
 
 // Media Query : Responsive
@@ -91,3 +79,9 @@ $xl: 75em;*/
     }
 }
 
+
+@mixin mediaXxl {
+    @media screen and (min-width: 2560px) {
+        @content;
+    }
+}

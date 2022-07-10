@@ -103,7 +103,7 @@
 }
 
 
-//Le nom n'apparaît que pour le document au milieu
+/*
 .documents{ //ou span
   &.current{
     .fileName{
@@ -117,7 +117,7 @@
   top:100px;
   color: $orange;
   display:none;
-}
+}*/
 
 
 //écran mobile
@@ -144,6 +144,15 @@
     .box{
       width:85px;
       height: 85px;
+    }
+  }
+}
+
+@include mediaXxl{
+  .sel{
+    .box{
+      width:120px;
+      height: 120px;
     }
   }
 }
