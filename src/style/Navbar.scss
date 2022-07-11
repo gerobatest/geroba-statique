@@ -47,19 +47,16 @@
             transition: 1s ease text-decoration;
 
             &.active{
-              text-decoration: underline;
-              text-decoration-color: $orange;
+              border-bottom: 1px solid $orange;
             }
           
             &:hover{
               cursor: pointer;
-              text-decoration: underline;
-              text-decoration-color: $orange;
+              border-bottom: 1px solid $orange;
             }  
         }  
         .active{
-          text-decoration: underline;
-          text-decoration-color: $orange;
+          border-bottom: 1px solid $orange;
         }
         .fill{
           display:none;

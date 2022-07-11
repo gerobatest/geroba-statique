@@ -289,7 +289,7 @@ const Existant  = ({ content,limit}) => {
                         <div onClick={toggleModal} className="overlay"></div>
                             <div className="PopUp">
                                 <img src="/etape-6.jpg" alt="Mode existant"/>
-                                <h1 className="title">Etape 5</h1>
+                                <h1 className="title">Etape 6</h1>
                                 <p className="lightTitle">Mode Route et Bâtiment</p>
                                 <div className="sm-container">
                                     <p className="sm-paragraph">
