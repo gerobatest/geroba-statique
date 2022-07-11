@@ -94,7 +94,7 @@ function Footer() {
   }
 
 
-  //envoyer les données de la form
+  //envoyer les données de la forme
   /*const submitHandler = async (e) => {
     e.preventDefault();
     if(!nameVal || !fNameVal || !emailVal ||!messageVal){

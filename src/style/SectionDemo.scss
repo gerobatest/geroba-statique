@@ -77,3 +77,11 @@
         } 
     }
 }
+
+@include mediaXl{
+    .sm-container{
+        .sm-paragraph{
+            line-height: $lineheightXxl; 
+        } 
+    }
+}

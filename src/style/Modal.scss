@@ -1,6 +1,5 @@
 @import "Variables.scss";
 
-
 body .active-modal {
     overflow-y: hidden;
 }
@@ -16,24 +15,20 @@ body .active-modal {
     position: fixed;
     overflow: scroll;
     background: rgba(255, 254, 254, 0.8);
-
     .PopUp{
         z-index: 99999;
         position:relative;
-    
         position: absolute;
-        top:70px;
+        top:20px;
         left:0;
         right:0;
         margin-left: auto;
         margin-right: auto;
         z-index:9999;
         background: $white;
-    
         box-shadow: 0px 0px 5px 5px grey;
-        width:70%;
+        width:50%;
         border-radius:5px;
-    
         .close-modal{
             z-index:9999;
             position:absolute;
@@ -42,7 +37,6 @@ body .active-modal {
             background:none;
             font-size:18px;
             padding:5px 10px;
-    
             &:hover{
                 cursor:pointer;
                 color: $white;
@@ -50,36 +44,47 @@ body .active-modal {
                 border:none;
             }
         }
-    
         img{
             width:100%;
         }
-    
-        .title, .lightTitle{
+        .title {
             margin-left: 3%;
             margin-top: 20px !important;
+        }
+        .lightTitle{
+            margin-left: 3%;
+            margin-top: 50px !important;
         }
     }  
 }
 
 @include mediaXs{
-    .PopUp{
-        width:95%;
+    .modal{
+        .PopUp{
+            top: 40px;
+            width:95%;
+        }
     }
 }
 
 @include mediaSm{
-    .PopUp{
-        width:95%;
+    .modal{
+        .PopUp{
+            top: 100px;
+            width:95%;
+        }
     }
 }
 
 @include mediaMd{
-    .PopUp{
-        width: 90%;
+    .modal{
+        .PopUp{
+            top: 130px;
+            width:95%;
+            .lightTitle{
+                font-size: 22px;
+                margin-top: 20px !important; 
+            }
+        }
     }
 }
-
-
-
-

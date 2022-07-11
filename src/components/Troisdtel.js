@@ -37,8 +37,10 @@ const Troisdtel = function() {
             z = 100;
         else if(window.innerWidth < 821 )
             z = 120;
-        else if(window.innerWidth >= 700)
-            z = 180; 
+        else if(window.innerWidth < 2560 )
+            z = 180;
+        else if(window.innerWidth >= 2560)
+            z = 370; 
 
         span.forEach((element, i) => {
             const valeur = (360/ nElements) * (i+1);

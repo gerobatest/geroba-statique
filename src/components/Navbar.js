@@ -73,7 +73,7 @@ const Navbar = () => {
                             </li>
 
                              <li>
-                                <Link className='items' activeClass='active' to="demo" spy={true} smooth={true} duration={1000} offset={-75}>DÉMO</Link>
+                                <Link className='items' activeClass='active' to="demo" spy={true} smooth={true} duration={1000} offset={-55}>DÉMO</Link>
                             </li> 
 
                             <li>

@@ -519,18 +519,24 @@
 
 //Ecran extra-large
 @include mediaXxl{
-  .nav{
-    height: $headerXl; 
-    .navcont{
-      .items{
-        font-size: $fontsizeXl;
+  .header{
+    .nav{
+      height: $headerXxl; 
+      .logo{
+        padding-top:20px;
+        transform: scale(1.2);
       }
-    }
-    .compte{
-      width:15%;
-      .btn-login{
-        margin-right:20px; //VALEUR:marge: alternative? 
-        font-size: $fontsizeXl;
+      .navcont{
+        .items{
+          font-size: 30px;
+        }
+      }
+      .compte{
+        width:10%;
+        .btn-login{
+          margin-right:20px; //VALEUR:marge: alternative? 
+          font-size: 30px;
+        }
       }
     }
   }

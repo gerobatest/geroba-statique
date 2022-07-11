@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 60vh; //?
   background: $sectiongreybg;
   position:relative; //nouveau
 
@@ -150,11 +150,15 @@
 
 @include mediaXxl{
   .sel{
+    min-height: 35vh;
     .box{
-      width:120px;
-      height: 120px;
+      width:170px;
+      height: 170px;
     }
-  }
+    .shadow{
+      height:90px;
+    }
+  } 
 }
 
 
