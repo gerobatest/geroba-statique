@@ -67,27 +67,24 @@
         }
         .sectionText, .sectionImage{
             width:100%;
-            padding:0 !important;
+            //margin: 0 10px;
         }
         .sectionText{
+            padding: 0 8px;
             li{
                 font-size: $fontsizeSm;
                 line-height: $lineheightSm; 
             }
         }
-        
-        /*TEST Image 2: Tablette
-        .sectionImage:nth-of-type(even){
-            right:-330px; //VARIABLE PARALLAX
-        } //TEST Image 1 et 2: iMac et ingénieur
-        .sectionImage:nth-of-type(odd){
-            left:-330px; //VARIABLE PARALLAX 
-        }*/
     }
     .container-telechargement{
-        .container{
-            .titleTelechargement{
-                padding-left:0 !important;
+        .titleTelechargement{
+            padding-left:8px !important;
+        }
+        .sm-container{
+            display:block;
+            .sm-paragraph{
+                width: 100%;
             }
         }
     }

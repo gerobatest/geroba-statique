@@ -27,6 +27,9 @@ import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
+
+
+
 const iconFeature = new Feature({
   geometry: new Point([1.253639, 44.414870]),
   name: '81 rue du Moulin, 46140 SAUZET, France'
@@ -128,7 +131,15 @@ function Footer() {
       message:''
     })
     document.getElementById("contact-form").reset();
-  }
+  };
+
+  //mois actuel
+  const MONTHS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
+  const currentMonthNum = new Date().getMonth();
+  const currentMonth = MONTHS[currentMonthNum];
+
+  //année actuelle 
+  const currentYear =  new Date().getUTCFullYear();
 
   return (
       <div className="footer" id="contact">
@@ -267,7 +278,7 @@ function Footer() {
         </div>
 
         <div className="footerRow2">
-          <p><i>Conçu et développé par  &nbsp;&nbsp; <img className="footerLogo" src={process.env.PUBLIC_URL+"gerobaFooter.jpg"} alt="gds group"></img> &nbsp;&nbsp; Tous droits réservés &copy; Juin 2022</i></p>
+          <p><i>Conçu et développé par  &nbsp;&nbsp; <img className="footerLogo" src="gerobaFooter.jpg" alt="gds group"></img> &nbsp;&nbsp; Tous droits réservés &copy; {} {currentMonth} {currentYear}</i></p>
          
         </div>
       </div>   

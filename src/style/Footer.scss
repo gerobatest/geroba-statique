@@ -331,6 +331,7 @@
             height: $footerXxl;
 
             .contact-container{
+                position: relative; 
                 .title{
                     font-size: $titleXl;
                 }
@@ -364,9 +365,12 @@
                     height:240px;
                 }
                 .form-btn{
+                    position: absolute;
+                    right: 50px; 
+                    
                     button{
                         padding:15px 30px;
-                        font-size:18px;
+                        font-size:18px;  
                     }
                 }
             }

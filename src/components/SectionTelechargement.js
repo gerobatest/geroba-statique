@@ -23,9 +23,7 @@ function SectionTelechargement() {
                         dapibus auctor.
                     </p> 
                 </div>
-                <div className="slider-telechargement">                 
-                </div>
-                
+                                
                 <Troisdtel/>
             </div>
             

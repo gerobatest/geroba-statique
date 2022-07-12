@@ -1,7 +1,6 @@
 @import "Variables.scss";
 
     #demo{
-        //background:blue;
         margin-top: $paddingSectionLg !important;
     }
     .titleDemo{
@@ -30,22 +29,25 @@
 //Responsive 
 //Ecran mobile
 @include mediaXs{
-    .title{
-        padding:0 !important; //Démo 
-    }
-    .sm-container{
-        display:block;
-
-        .sm-paragraph{
-            width:100%;
-            padding:0 !important; 
-            line-height: $lineheightSm; 
+    #demo{
+        padding: 0 8px;
+        .title{
+            padding:0 !important; //Démo 
         }
-        //second element
-        p.sm-paragraph:nth-child(even) {
-            margin-top:20px; //VARIABLE 
-        } 
-    }
+        .sm-container{
+            display:block;
+
+            .sm-paragraph{
+                width:100%;
+                padding:0 !important; 
+                line-height: $lineheightSm; 
+            }
+            //second element
+            p.sm-paragraph:nth-child(even) {
+                margin-top:20px; //VARIABLE 
+            } 
+        }
+    }   
 }
 
 
