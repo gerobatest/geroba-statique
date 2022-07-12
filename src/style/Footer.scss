@@ -160,6 +160,7 @@
         /*position du logo*/
         .footerLogo{
             vertical-align: text-bottom;
+            height: 30px;
         }
     }
 }
@@ -206,7 +207,11 @@
             p {
                 padding: 10px 0px;
                 font-size:11px;
-            }
+
+                .footerLogo{
+                height: 20px;
+                }
+            }   
         }
     }
 }
@@ -226,7 +231,10 @@
         .footerRow2{
             p {
                 padding: 25px 0px;
-                font-size:14px; //VARIABLE 
+                font-size:14px; 
+                .footerLogo{
+                    height: 24px;
+                }
             }
         }
     }
@@ -247,7 +255,10 @@
         .footerRow2{
             p {
                 padding: 25px 0px;
-                font-size:14px; //VARIABLE 
+                font-size:14px; 
+                .footerLogo{
+                    height: 24px;
+                }
             }
         }
     }
@@ -305,7 +316,10 @@
         .footerRow2{
             p {
                 padding: 45px 0px;
-                font-size:15px; //VARIABLE 
+                font-size:15px; 
+                .footerLogo{
+                    height: 32px;
+                }
             }
         }
     }
@@ -360,7 +374,10 @@
         .footerRow2{
             p {
                 padding: 45px 0px;
-                font-size: $fontsizeXl; //VARIABLE 
+                font-size: $fontsizeXl; 
+                .footerLogo{
+                    height: 32px;
+                }
             }
         }
     }

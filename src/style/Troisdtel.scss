@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh; //?
+  min-height: 60vh; 
   background: $sectiongreybg;
   position:relative; //nouveau
 
@@ -123,6 +123,7 @@
 //écran mobile
 @include mediaXs{
   .sel{
+    min-height: 30vh;
     .box{
       width:45px;
       height: 45px;
@@ -132,6 +133,7 @@
 
 @include mediaSm{
   .sel{
+    min-height: 30vh;
     .box{
       width:70px;
       height: 70px;
@@ -141,6 +143,7 @@
 
 @include mediaMd{
   .sel{
+    min-height: 25vh;
     .box{
       width:85px;
       height: 85px;

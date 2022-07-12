@@ -95,7 +95,7 @@ const Navbar = () => {
 
         {showButton && (
             <Link to="/#" onClick={scrollToTop} className="btn-top">
-                <BsArrowUpCircleFill size="28px" color="#F15a22"/>
+                <BsArrowUpCircleFill size="32px" color="#F15a22"/>
             </Link>
         )}
       </>
