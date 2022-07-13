@@ -1,0 +1,165 @@
+@import 'Variables.scss';
+@import 'Commun.scss';
+
+
+.sectionContainer{
+    margin-top: $paddingSectionLg !important;
+    display:flex;
+    .sectionImage{
+        padding: 3%;
+        width:50%;
+        overflow:hidden; 
+        img{
+            width:100%; 
+            height:100%;
+            object-fit: contain;
+            overflow:hidden; 
+        }
+    }
+    .sectionText{
+        padding: 3%;
+        width:50%;
+        .paragraph{
+            margin-top: $lineheightLg;
+        }
+        li{
+            font-size: $fontsizeLg;
+            color: $grey;
+            line-height:$lineheightLg;
+            margin:20px 0px; 
+            margin-left:17px !important;
+
+            .openFonc{
+                text-decoration: none;
+                color: $orange;     
+            }
+            .openFonc:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+//Téléchargement
+.container-telechargement{ 
+    margin-top: $paddingSectionLg !important;
+    padding-top: 20px;
+    background: $sectiongreybg;
+    .titleTelechargement{
+        padding-left:3%;
+    }
+}
+
+
+//Responsive
+//Phone: mobile 
+@include mediaXs{
+    .sectionContainer{
+        display:block;
+        position:relative; //test
+
+        .sectionImage{
+            display:none; //OU METTRE LES IMAGES 
+            position:absolute;
+            top:0;
+        }
+        .sectionText, .sectionImage{
+            width:100%;
+            //margin: 0 10px;
+        }
+        .sectionText{
+            padding: 0 8px;
+            li{
+                font-size: $fontsizeSm;
+                line-height: $lineheightSm; 
+            }
+        }
+    }
+    .container-telechargement{
+        .titleTelechargement{
+            padding-left:8px !important;
+        }
+        .sm-container{
+            display:block;
+            .sm-paragraph{
+                width: 100%;
+            }
+        }
+    }
+}
+
+//Ecran tablette eg:iPad Mini
+@include mediaSm{
+    .sectionContainer{
+        .sectionText{
+            width:50%; 
+            li{
+                font-size: $fontsizeSm;
+                line-height: $lineheightSm;
+            }
+        }
+        .sectionImage{
+            height:50%; 
+            margin:auto;
+            //display:none;
+        }
+    }  
+}
+
+//Ecran medium : iPad Air 
+@include mediaMd{
+    .sectionContainer{
+        .sectionText{
+            width:50%; 
+            li{
+                font-size: $fontsizeMd;
+                line-height: $lineheightMd;
+            }
+        }
+        .sectionImage{
+            margin:auto;
+        }
+    } 
+}
+
+//Ecran large 
+@include mediaXl{
+    .sectionContainer{
+        .sectionText{
+            width:50%; 
+            li{
+                font-size: $fontsizeXl;
+                line-height: $lineheightXl;
+            }
+        }
+        .sectionImage{
+            margin:auto;
+        }
+    } 
+}
+
+@include mediaXxl{
+    .sectionContainer{
+        .sectionText{
+            width:50%; 
+            li{
+                font-size: $fontsizeXxl;
+                line-height: $lineheightXxl;
+            }
+        }
+        .sectionImage{
+            img{
+                width:65%; 
+                height:65%;
+                object-fit: contain;
+            }
+        }       
+    }
+}
+
+
+
+
+
