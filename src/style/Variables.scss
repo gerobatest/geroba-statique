@@ -71,15 +71,15 @@ $footerXxl: 1300px;
 }
 
 //Desktop
-@mixin mediaLg {
+/*@mixin mediaLg {
     @media screen and (min-width: 993px) and (max-width: 1366px) {
         @content;
     }
-}
+}*/
 
 //Widescreen 
 @mixin mediaXl {
-    @media screen and (min-width: 1367px) {
+    @media screen and (min-width: 1367px) and (max-width: 2559px){
         @content;
     }
 }

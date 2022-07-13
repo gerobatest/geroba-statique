@@ -7,7 +7,8 @@
   width:100%;
   z-index:999;
 
-  .nav{       
+  .nav{   
+       
     display:flex;
     z-index:999;
     justify-content: space-around;
@@ -40,7 +41,6 @@
         //un lien 
         .items{
             font-size:14px;
-            color: $grey;
             text-decoration: none;
             height: 50%;
             transition: 1s ease text-decoration;
@@ -84,6 +84,7 @@
         .btn-login{
           background:none;
           border:none;
+          font-size: 13px !important;
 
           &:hover{
             cursor:pointer;
@@ -92,7 +93,6 @@
     }
   }  
 }
-
 
 //Scroll top btn
 .btn-top{
@@ -107,7 +107,6 @@
     cursor:pointer;
   }
 }
-
 
     
 //Mobile 
@@ -248,6 +247,7 @@
     }
   }
 }
+
 
 
 //Tablette iPad Mini : ajout icon!!! 
@@ -464,8 +464,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        
-        
+          
         //linkedin
         a, .btn-login{
           margin-right: 20px;
@@ -522,6 +521,7 @@
   }
 }
 
+
 //Ecran large 
 @include mediaXl{
   .header{
@@ -536,12 +536,13 @@
         width:18%;
         .btn-login{
           margin-right:20px; //VALEUR:marge: alternative? 
-          font-size:18px;
+          font-size:15.5px !important;
         }
       }
     }
   }
 }
+
 
 //Ecran extra-large
 @include mediaXxl{
@@ -560,8 +561,8 @@
       .compte{
         width:10%;
         .btn-login{
-          margin-right:20px; //VALEUR:marge: alternative? 
-          font-size: 30px;
+          margin-right:20px; 
+          font-size: 28px !important;
         }
       }
     }
