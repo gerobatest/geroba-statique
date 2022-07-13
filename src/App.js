@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from './components/Navbar';
-import SectionSolution from './components/SectionSolution';
-import SectionComment from './components/SectionComment';
+import Accueil from './components/Accueil';
+import APropos from './components/APropos';
 import SectionFonc from './components/SectionFonc';
 import SectionTelechargement from './components/SectionTelechargement';
 import SectionDemo from './components/SectionDemo';
@@ -15,8 +15,8 @@ function App(){
           <Navbar/> 
           <div className = "container">
             <ParallaxProvider> 
-              <SectionSolution title="Solution de mobilité"/>
-              <SectionComment/>
+              <Accueil title="Solution de mobilité"/>
+              <APropos/>
               <SectionFonc title="Fonctionnalités"/>
             </ParallaxProvider>
             <SectionTelechargement/>  
