@@ -66,7 +66,9 @@ function Footer() {
     name:'',
     fname:'',
     email:'',
-    message:''
+    message:'',
+    mailSent: false, 
+    error: null
   });
   
 
@@ -98,68 +100,22 @@ function Footer() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    try{
-      const {data} = await axios.post(`./sendmail.php`, {
-        data: {
-          nom: formVal.name, 
-          prénom: formVal.fname,
-          email: formVal.email,
-          message: formVal.message
-        }
-      });
-      toast.success(data.message);
-    } catch(err){
-      toast.error(
-        err.response && err.response.data.message?
-        err.response.data.message: 
-        err.message
-      );
-    }
-  }
-  
-  /*const submitHandler = async (e) => {
-    e.preventDefault();
-    try{
-      const {data} = await axios.post(`./sendmail.php`, {
-        data: {
-          nom: formVal.name, 
-          prénom: formVal.fname,
-          email: formVal.email,
-          message: formVal.message
-        }
-      });
-      toast.success(data.message);
-    } catch(err){
-      toast.error(
-        err.response && err.response.data.message?
-        err.response.data.message: 
-        err.message
-      );
-    }
-  }*/
 
-  //envoyer les données de la forme
-  /*const submitHandler = async (e) => {
-    e.preventDefault();
-    if(!nameVal || !fNameVal || !emailVal ||!messageVal){
-      return toast.error('Completer touts les champs');
-    }
-    try{
-      const {data} = await axios.post(`/send`, {
-        formVal.name, 
-        fNameVal,
-        emailVal,
-        messageVal
-      });
-      toast.success(data.message);
-    } catch(err){
-      toast.error(
-        err.response && err.response.data.message?
-        err.response.data.message: 
-        err.message
-      );
-    }
-  }*/
+    axios({
+      method: 'post',
+      url: `http://localhost/sendmail/index.php`,
+      headers: { 'content-type': 'application/json' },
+      data: {
+        name: formVal.name, 
+        fName: formVal.fname,
+        email: formVal.email,
+        message: formVal.message
+      }
+    })
+
+    console.log("Email submitted");
+  }
+
 
   //Efface tous les champs 
   const cancelForm = () =>{
