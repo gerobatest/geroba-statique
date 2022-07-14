@@ -145,6 +145,8 @@
             .contact-info{
                 margin-top: 50px; //Variable 
                 line-height:$lineheightLg; //VARIABLES
+                transition: 0.2s ease all;
+
                 p{
                     font-size: $fontsizeLg;
                 }
@@ -197,6 +199,7 @@
                 }
                 .contact-info{
                     line-height:$lineheightSm; //VARIABLES
+                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeSm;
                     }
@@ -279,6 +282,7 @@
                 .contact-info{
                     margin-top: 170px;
                     line-height:$lineheightXl; 
+                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeXl;
                     }
@@ -338,6 +342,7 @@
                 .contact-info{
                     margin-top: 170px;
                     line-height:$lineheightXxl; 
+                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeXxl;
                     }

@@ -85,8 +85,8 @@ const Navbar = () => {
                         </ul>
 
                         <div className='compte'>
-                            <a href="https://www.linkedin.com/company/gds-groupe/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size="18px" color="black"/></a> 
-                            <button className="btn-login" onClick={() => openInNewTab('https://www.gerobamaster.fr/login')}><FaUserAlt size="15px"/><span className="loginText"> SE CONNECTER</span></button>
+                            <a href="https://www.linkedin.com/company/gds-groupe/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className="linkedin"/></a> 
+                            <button className="btn-login" onClick={() => openInNewTab('https://www.gerobamaster.fr/login')}><FaUserAlt className="user"/><span className="loginText"> SE CONNECTER</span></button>
                         </div>
 
                     </nav>

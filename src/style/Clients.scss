@@ -35,19 +35,20 @@
 .cards{
     margin:0px auto;
     width:90%;
+    height: 269px;
 
     .card{
         padding:10px 0px;
         margin: auto;
-        height: 100px;
+        height: 269px;
+        display:block !important;
 
         .clientLogo{ //fit the image 
-            margin:auto;
             display: block;
             width:75%;
-            // height:75%;
-            // position: absolute;
-            top: 50%;
+            height:75%;
+            top: 12%;
+            position:relative;
         }
     }
 }

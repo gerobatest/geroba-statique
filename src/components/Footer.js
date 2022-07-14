@@ -29,7 +29,6 @@ import axios from 'axios';
 
 
 
-
 const iconFeature = new Feature({
   geometry: new Point([1.253639, 44.414870]),
   name: '81 rue du Moulin, 46140 SAUZET, France'
@@ -73,7 +72,7 @@ function Footer() {
 
   const handleChange = (e) => {
     const {name,value} = e.target
-    setFormVal(prevState=>{
+    setFormVal(prevState=>{ 
       setShowCancelButton(true)
       if (value === '')
         setShowSendButton(false)
@@ -96,6 +95,48 @@ function Footer() {
     }
   }
 
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try{
+      const {data} = await axios.post(`./sendmail.php`, {
+        data: {
+          nom: formVal.name, 
+          prénom: formVal.fname,
+          email: formVal.email,
+          message: formVal.message
+        }
+      });
+      toast.success(data.message);
+    } catch(err){
+      toast.error(
+        err.response && err.response.data.message?
+        err.response.data.message: 
+        err.message
+      );
+    }
+  }
+  
+  /*const submitHandler = async (e) => {
+    e.preventDefault();
+    try{
+      const {data} = await axios.post(`./sendmail.php`, {
+        data: {
+          nom: formVal.name, 
+          prénom: formVal.fname,
+          email: formVal.email,
+          message: formVal.message
+        }
+      });
+      toast.success(data.message);
+    } catch(err){
+      toast.error(
+        err.response && err.response.data.message?
+        err.response.data.message: 
+        err.message
+      );
+    }
+  }*/
 
   //envoyer les données de la forme
   /*const submitHandler = async (e) => {
@@ -198,7 +239,7 @@ function Footer() {
               Contactez-nous
             </h1> 
 
-            <form id="contact-form" /*onSubmit={submitHandler}*/>
+            <form id="contact-form" onSubmit={submitHandler}>
               {/* Nom */}
               <div>
                 <input 

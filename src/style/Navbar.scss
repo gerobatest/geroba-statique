@@ -8,7 +8,6 @@
   z-index:999;
 
   .nav{   
-       
     display:flex;
     z-index:999;
     justify-content: space-around;
@@ -90,6 +89,13 @@
             cursor:pointer;
           }
         }
+    }
+    .linkedin{
+      font-size:16px;
+      color: black;
+    }
+    .user{
+      font-size:16px;
     }
   }  
 }
@@ -259,7 +265,7 @@
       .logo{
         transform:scale(0.8);
         transform: translateY(47px);
-        padding:3px 0px !important; //VARIABLE
+        padding:3px 0px !important; 
         background: $white;
         width:100%;
         display:flex;
@@ -267,7 +273,7 @@
 
         //image logo
         .geroba{
-          transform:scale(0.7); //VARIABLE
+          transform:scale(0.7);
         }
 
         //bouton qui affiche les liens 
@@ -287,7 +293,7 @@
         flex-direction: column;
         position: fixed;
         right: -100vw;
-        width:50% !important; //Variable
+        width:50% !important; 
         top: 104px;
         padding:10px 0px;
         height: 35vh;
@@ -470,6 +476,7 @@
           margin-right: 20px;
         }
       }
+
     }
 
     .show-nav .navcont{
@@ -539,6 +546,13 @@
           font-size:15.5px !important;
         }
       }
+      .linkedin{
+        font-size:17px;
+        color: black;
+      }
+      .user{
+        font-size:17px;
+      }
     }
   }
 }
@@ -564,6 +578,13 @@
           margin-right:20px; 
           font-size: 28px !important;
         }
+      }
+      .linkedin{
+        font-size:30px;
+        color: black;
+      }
+      .user{
+        font-size:28px;
       }
     }
   }
