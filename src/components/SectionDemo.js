@@ -88,10 +88,10 @@ function SectionDemo() {
           <p className="pclients"><i>Ils nous font confiance... Voici quelques exemples de collaborations qui illustrent notre savoir-faire.</i></p>
           <div className="cards">
             <Slider {...settings}>
-              {ClientData.map((item) => (
+              {ClientData.map((item, index) => (
               <div key="item" className="card"> 
                 
-                <img className="clientLogo" src={item.imgPath} alt={item.title} title={item.title}/>
+                <img className="clientLogo" style={{top: item.style}} id={index} src={item.imgPath} alt={item.title} title={item.title}/>
               </div>
               ))}
             </Slider>     

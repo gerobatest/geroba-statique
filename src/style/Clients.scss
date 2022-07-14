@@ -39,18 +39,15 @@
 
     .card{
         padding:10px 0px;
-        margin: auto;
+        margin: auto 20px;
         height: 269px;
-        display:block !important;
 
         .clientLogo{ //fit the image 
             display: block;
-            width:75%;
-            height:75%;
-            top: 12%;
             position:relative;
         }
     }
+   
 }
 
 @include mediaXs{
