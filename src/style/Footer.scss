@@ -182,6 +182,7 @@
             }
             .contact-container{
                 .title{
+                padding-top: 15px;
                 font-size: $titleSm; //titre responsive
                 } 
                 //Nom* et Prénom*
@@ -230,6 +231,12 @@
             .map{
                 height:450px;
             }
+            .contact-container{
+                .title{
+                    padding-top: 15px;
+                    font-size: $titleSm;
+                }
+            }
         }
         .footerRow2{
             p {
@@ -253,6 +260,12 @@
             }
             .map{
                 height:450px;
+            }
+            .contact-container{
+                .title{
+                    padding-top: 15px;
+                    font-size: $titleMd;
+                }
             }
         }
         .footerRow2{

@@ -92,7 +92,7 @@
     }
     .linkedin{
       font-size:16px;
-      color: black;
+      color: $black;
     }
     .user{
       font-size:16px;
@@ -197,12 +197,19 @@
         //linkedin
         a, .btn-login{
           margin-right: 20px;
+          color: $white;
         }
 
         //Se connecter
         .btn-login{
           display:none;
         }
+      }
+      .linkedin{
+        color: $white;
+      }
+      .user{
+        color: $white;
       }
     }
 
@@ -340,7 +347,14 @@
         //linkedin
         a, .btn-login{
           margin-right: 20px;
+          color: $white;
         }
+      }
+      .linkedin{
+        color: $white;
+      }
+      .user{
+        color: $white;
       }
     }
 
@@ -475,7 +489,14 @@
         //linkedin
         a, .btn-login{
           margin-right: 20px;
+          color: $white;
         }
+      }
+      .linkedin{
+        color: $white;
+      }
+      .user{
+        color: $white;
       }
 
     }
