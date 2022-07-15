@@ -1,33 +1,6 @@
 @import "Variables.scss";
 @import "Commun.scss";
 
-//animation
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-      @content;
-    }
-    @keyframes #{$animation-name} {
-      @content;
-    }
-}
-
-
-@mixin animation($str) {
-    -webkit-animation: #{$str};
-    animation: #{$str};
-}
-
-  
-@include keyframes(scrollUp) {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-
 .footer{ 
     margin-top: $paddingSectionLg !important;
     color: $grey;

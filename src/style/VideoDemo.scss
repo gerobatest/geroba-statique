@@ -22,7 +22,7 @@
 //Ecran mobile
 @include mediaXs{
     .video-container{
-        height:220px; //largeur de la video 
+        height:220px; 
     }
 }
 
@@ -41,13 +41,13 @@
 //Ecran large
 @include mediaXl{
     .video-container{
-        height:650px; //??
+        height:650px; 
     }
 }
 
 @include mediaXxl{
     .video-container{
-        height:1400px; //??
+        height:1400px; 
     }
 }
 

@@ -5,11 +5,6 @@
         "features": [
           {
             "type": "Feature",
-            "properties": {
-              "kind": "Company",
-              "name": "GDS group",
-              "state": "France"
-            },
             "geometry": {
               "type": "Point",
               "coordinates":[
