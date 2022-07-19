@@ -104,6 +104,7 @@
 //Ecran mobile 
 @include mediaXs{
   .slider{
+    transform: translateY(75px);
     height:50vh;
     .textslide{
       right: 60px;
@@ -128,6 +129,7 @@
 
 @include mediaSm{
   .slider{
+    transform: translateY(55px);
     height:55vh;
     .textslide{
       right: 230px;
@@ -148,6 +150,7 @@
 //iPad Air
 @include mediaMd{
   .slider{
+    transform: translateY(50px);
     height:50vh;
     .textslide{
       right: 230px;

@@ -60,13 +60,13 @@
         position:relative; //test
 
         .sectionImage{
-            display:none; //OU METTRE LES IMAGES 
-            position:absolute;
-            top:0;
+            img{
+                transform: scale(0.7);
+            }
         }
         .sectionText, .sectionImage{
             width:100%;
-            //margin: 0 10px;
+            display:block;
         }
         .sectionText{
             padding: 0 8px;
@@ -76,6 +76,18 @@
             }
         }
     }
+    //Comment ça marche : image en dessus du texte
+    #about{
+        display:flex;
+        flex-direction: column;
+        .sectionImage{
+            order:1;
+        }
+        .sectionText{
+            order: 2;
+        }
+    }
+
     .container-telechargement{
         .titleTelechargement{
             padding-left:8px !important;

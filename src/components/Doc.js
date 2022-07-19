@@ -32,10 +32,12 @@ export default function Doc() {
         {docData.map((slide, index) =>{
             return(     
                 <div className="single-doc-container" id={index} key={index}>
-                    <a href={slide.document} target="_blank" rel="noopener noreferrer">
+                    
                       <img src={slide.image} alt={slide.image}/>
+                    <a href={slide.document} target="_blank" rel="noopener noreferrer">
+                      <p className="doc-number">Document {index + 1}</p>
                     </a>
-                    <p className="doc-number">Document {index + 1}</p>
+                    
                     <p className="doc-name">{slide.name}</p> 
                 </div>    
             ) 

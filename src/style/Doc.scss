@@ -67,10 +67,13 @@
 
         .doc-name{
             display:none;
+
+            &:hover{
+                cursor: pointer;
+            }
         }
 
         &:hover{
-            cursor:pointer;
 
             .doc-name{
                 color: $white;
@@ -127,5 +130,9 @@
 @include mediaXxl{
     .doc-container{
         height:750px;
+    }
+
+    button{
+        font-size:35px;
     }
 }
