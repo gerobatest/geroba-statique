@@ -46,15 +46,26 @@
             display: block;
             position:relative;
         }
-    }
-   
+    } 
 }
 
+/*
 @include mediaXs{
     .cards{
-        width:85%;
+        height: 72.5px;
+        background: yellow;
+        .card{
+            padding:5px 0;
+            background: pink;
+            margin: 5px auto;
+            height: 72.5px;
+            .clientLogo{
+                transform: scale(0.25);
+            }
+        }
     }
-}
+}*/
+    
 
 
 

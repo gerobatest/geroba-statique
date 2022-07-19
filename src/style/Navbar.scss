@@ -84,6 +84,7 @@
           background:none;
           border:none;
           font-size: 13px !important;
+          color:$black;
 
           &:hover{
             cursor:pointer;
@@ -96,6 +97,7 @@
     }
     .user{
       font-size:16px;
+      color: $black;
     }
   }  
 }

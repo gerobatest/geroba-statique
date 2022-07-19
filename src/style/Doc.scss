@@ -1,0 +1,131 @@
+@import "Variables.scss";
+@import "Commun.scss";
+
+.scroll-container{
+    position:relative;
+    //width: 95%;
+    margin:0px auto;
+
+    .scroll-up{
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+
+    .scroll-down{
+        position:absolute;
+        bottom:10px;
+        right:10px;
+    }
+
+    button{
+        background:none;
+        border:none;
+        color:$white;
+        font-size:25px;
+    
+        &:hover{
+            background: $white;
+            color:$grey;
+        }
+    }
+}
+
+.doc-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    margin:0px auto;
+    
+    background: $grey;
+    //overflow:scroll; //Si utilisé, on peut scroller les images manuellement
+    overflow:hidden;
+
+    .single-doc-container{
+        height: 50%; 
+        width: 33.33%;
+        position: relative;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+
+        .doc-name, .doc-number{
+            position:absolute;
+            width:100%;
+            text-align:center;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            color: $orange;
+        }
+
+        .doc-name{
+            display:none;
+        }
+
+        &:hover{
+            cursor:pointer;
+
+            .doc-name{
+                color: $white;
+                display: block;
+            }
+            img{
+                filter : brightness(1.11) contrast(1.72) grayscale(0.03) hue-rotate(-182deg) invert(0.07) opacity(0.54);
+            }
+
+            .doc-number{
+                display:none;
+            }
+        }
+    }
+}
+
+.doc-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+@include mediaXs{
+    .doc-container{
+        height:250px;
+        .single-doc-container{
+            width: 50%;
+        }
+    }
+}
+
+@include mediaSm{
+    .doc-container{
+        height:325px;
+    
+        .single-doc-container{
+            height: 175px; 
+            width: 33.33%;
+        }
+    }
+}
+
+@include mediaMd{
+    .doc-container{
+        height:350px;
+    }
+}
+
+@include mediaXl{
+    .doc-container{
+        height:400px;
+    }
+}
+
+@include mediaXxl{
+    .doc-container{
+        height:750px;
+    }
+}

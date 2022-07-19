@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/Section.scss'
-import Troisdtel from "./Troisdtel";
+import Doc from "./Doc";
 
 function SectionTelechargement() {
   return( 
@@ -24,7 +24,7 @@ function SectionTelechargement() {
                     </p> 
                 </div>
                                 
-                <Troisdtel/>
+                <Doc/>
             </div>
             
         </>

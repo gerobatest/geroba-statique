@@ -3,34 +3,53 @@ import { v4 as uuidv4 } from "uuid";
 const docData = [
     {
         id: uuidv4(),
-        image : '/D1.avif', 
-        name: 'demo1.pdf', 
+        image : '/cover.png', 
+        name: 'Présentation', 
         document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
-        image : '/D1.avif',  
-        name: 'demo2.pdf',
-        document: '/demo2.pdf'    
+        image : '/cover.png', 
+        name: 'Note d\'installation', 
+        document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
-        image : '/D1.avif',
-        name: 'demo3.pdf',
-        document: '/demo3.pdf'  
+        image : '/cover.png', 
+        name: 'Geroba master', 
+        document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
-        image : '/D1.avif',
-        name: 'demo4.pdf',
-        document: '/demo4.pdf'  
+        image : '/cover.png', 
+        name: 'Document 4', 
+        document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
-        image : '/D1.avif',
-        name: 'demo5.pdf', 
-        document: '/demo5.pdf'
-    }
+        image : '/cover.png', 
+        name: 'Document 5', 
+        document: '/demo1.pdf'  
+    },
+    {
+        id: uuidv4(),
+        image : '/cover.png', 
+        name: 'Document 6', 
+        document: '/demo1.pdf'  
+    },
+    {
+        id: uuidv4(),
+        image : '/cover.png', 
+        name: 'Document 4', 
+        document: '/demo1.pdf'  
+    },
+    {
+        id: uuidv4(),
+        image : '/cover.png', 
+        name: 'Document 5', 
+        document: '/demo1.pdf'  
+    },
+
 ]
 
 export default docData;
