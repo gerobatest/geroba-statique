@@ -61,7 +61,7 @@ const Navbar = () => {
                             </li>
                             
                             <li>
-                                <Link className='items' activeClass='active' to="about" spy={true} smooth={true} duration={1000} offset={-85}>À PROPOS</Link> 
+                                <Link className='items' activeClass='active' to="about" spy={true} smooth={true} duration={1000} offset={-85}>À&nbsp;PROPOS</Link> 
                             </li>
                             
                             <li>

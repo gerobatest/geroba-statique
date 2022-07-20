@@ -164,11 +164,11 @@
 
         li{
           margin:0 !important;
+          width: 100%;
 
           .items{ //les liens 
             height: 100%;
-            width: 100%;
-            padding: 9px 38% 9px 25%;
+            padding: 9px 70% 9px 25%;
 
             &.active {
               text-decoration:none;
@@ -318,7 +318,7 @@
           .items{ //les liens 
             height: 100%;
             width: 100%;
-            padding: 9px 55% 9px 25%;
+            padding: 14px 70% 14px 25%;
 
             &.active {
               text-decoration:none;
@@ -461,7 +461,7 @@
           .items{ //les liens 
             height: 100%;
             width: 100%;
-            padding: 9px 38% 9px 25%;
+            padding: 15px 70% 15px 25%;
 
             &.active {
               text-decoration:none;

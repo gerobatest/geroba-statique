@@ -51,20 +51,23 @@ function setMargin (newMargin){
   document.documentElement.style.setProperty('--contactInfo-marginTop', newMargin);
 }
 
-//const [center, setCenter] = useState([44.60001675785579, 4.822871862155328]); //map focus
-const [center, setCenter] = useState([1.253327, 44.414888]); //map focus
-//const [zoom, setZoom] = useState(9);
-const [zoom, setZoom] = useState(18)
-const [showLayer2, setShowLayer2] = useState(true);
-const [showCancelButton, setShowCancelButton] = useState(false); //Bouton annuler
-const [showSendButton, setShowSendButton] = useState(false);  //Bouton envoyer 
-//const [Textdecoration, setTextdecoration] = useState(true); //contenu de adresse 
-const [formVal, setFormVal] = useState({
-  name:'',
-  fname:'',
-  email:'',
-  message:''
-});
+
+  const [center, setCenter] = useState([1.253327, 44.414888]); //le centre de la carte après chargement
+  const [zoom, setZoom] = useState(18)
+  const [showLayer2, setShowLayer2] = useState(true);
+  const [showCancelButton, setShowCancelButton] = useState(false); //Bouton annuler
+  const [showSendButton, setShowSendButton] = useState(false);  //Bouton envoyer 
+
+
+  //Les valeurs depuis la forme
+  const [formVal, setFormVal] = useState({
+    name:'',
+    fname:'',
+    email:'',
+    message:'',
+    mailSent: false, 
+    error: null
+  });
 
   const handleChange = (e) => {
     const {name,value} = e.target
@@ -134,16 +137,20 @@ const [formVal, setFormVal] = useState({
     })
     document.getElementById("contact-form").reset();
   };
+
+
   //mois actuel
   const MONTHS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
   const currentMonthNum = new Date().getMonth();
   const currentMonth = MONTHS[currentMonthNum];
+
   //année actuelle 
   const currentYear =  new Date().getUTCFullYear();
+
   return (
       <div className="footer" id="contact">
         <div className="footerRow1">
-          {/*map */}
+          {/*La carte*/}
           <div className="map" id="map">
             <Map center={fromLonLat(center)} zoom={zoom}>
               <Layers>
@@ -177,7 +184,7 @@ const [formVal, setFormVal] = useState({
             <h1 className="title" > 
               Contactez-nous
             </h1> 
-            <form id="contact-form" /*onSubmit={submitHandler}*/>
+            <form id="contact-form" onSubmit={submitHandler}>
               {/* Nom */}
               <div>
                 <input 
@@ -247,7 +254,7 @@ const [formVal, setFormVal] = useState({
           </div>
         </div>
         <div className="footerRow2">
-          <p><i>Conçu et développé par  &nbsp;&nbsp; <img className="footerLogo" src="gerobaFooter.jpg" alt="gds group"></img> &nbsp;&nbsp; Tous droits réservés &copy; {} {currentMonth} {currentYear}</i></p>
+            <p><i>Conçu et développé par  &nbsp;&nbsp; <img className="footerLogo" src="gerobaFooter.jpg" alt="gds group"></img> &nbsp;&nbsp; Tous droits réservés &copy; {} {currentMonth} {currentYear}</i></p>
         </div>
       </div>   
 )}
