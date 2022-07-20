@@ -40,33 +40,35 @@ const iconStyle = new Style({
 });
 iconFeature.setStyle(iconStyle);
 const geojsonObject2 = mapConfig.geojsonObject2;
+
 function Footer() {
   useEffect(() => {
     const margin = getComputedStyle(document.documentElement).getPropertyValue('--contactInfo-marginTop');
-  }, []);
+}, []);
 
 
-  function setMargin (newMargin){
-    document.documentElement.style.setProperty('--contactInfo-marginTop', newMargin);
+function setMargin (newMargin){
+  document.documentElement.style.setProperty('--contactInfo-marginTop', newMargin);
 }
-  //const [center, setCenter] = useState([44.60001675785579, 4.822871862155328]); //map focus
-  const [center, setCenter] = useState([1.253327, 44.414888]); //map focus
-  //const [zoom, setZoom] = useState(9);
-  const [zoom, setZoom] = useState(18)
-  const [showLayer2, setShowLayer2] = useState(true);
-  const [showCancelButton, setShowCancelButton] = useState(false); //Bouton annuler
-  const [showSendButton, setShowSendButton] = useState(false);  //Bouton envoyer 
-  //const [Textdecoration, setTextdecoration] = useState(true); //contenu de adresse 
-  const [formVal, setFormVal] = useState({
-    name:'',
-    fname:'',
-    email:'',
-    message:''
-  });
+
+//const [center, setCenter] = useState([44.60001675785579, 4.822871862155328]); //map focus
+const [center, setCenter] = useState([1.253327, 44.414888]); //map focus
+//const [zoom, setZoom] = useState(9);
+const [zoom, setZoom] = useState(18)
+const [showLayer2, setShowLayer2] = useState(true);
+const [showCancelButton, setShowCancelButton] = useState(false); //Bouton annuler
+const [showSendButton, setShowSendButton] = useState(false);  //Bouton envoyer 
+//const [Textdecoration, setTextdecoration] = useState(true); //contenu de adresse 
+const [formVal, setFormVal] = useState({
+  name:'',
+  fname:'',
+  email:'',
+  message:''
+});
 
   const handleChange = (e) => {
     const {name,value} = e.target
-    setMargin('50px')
+    setMargin('120px')
     setFormVal(prevState=>{
       setShowCancelButton(true)
       if (value === '')
@@ -86,20 +88,29 @@ function Footer() {
       setShowSendButton(true)
     }
   }
-  //envoyer les données de la forme
-  /*const submitHandler = async (e) => {
+
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    if(!nameVal || !fNameVal || !emailVal ||!messageVal){
-      return toast.error('Completer touts les champs');
-    }
     try{
-      const {data} = await axios.post(`/send`, {
-        formVal.name, 
-        fNameVal,
-        emailVal,
-        messageVal
-      });
-      toast.success(data.message);
+      const {info} = await axios({
+        method: 'post',
+        url: `http://localhost/sendmail/sendmail.php`,
+        headers: { 'content-type': 'application/json' },
+        data: {
+          nom: formVal.name, 
+          prénom: formVal.fname,
+          email: formVal.email,
+          message: formVal.message
+        }
+      })
+        .then(result => {
+          this.setState({
+            mailSent: result.data.sent
+          })
+        })
+        .catch(error => this.setState({ error: error.message }));
+      toast.success(info.message);
     } catch(err){
       toast.error(
         err.response && err.response.data.message?
@@ -107,7 +118,9 @@ function Footer() {
         err.message
       );
     }
-  }*/
+  }
+
+
   //Efface tous les champs 
   const cancelForm = () =>{
     setMargin('0px')
@@ -158,16 +171,6 @@ function Footer() {
                 /> 
               {/*81 rue du Moulin, 46140 SAUZET, France*/}
           </div>
-            {/* <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.568638801216!2d5.039171219992005!3d47.30322869062392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f29dcdf6153427%3A0xcd5baeadbd91bcfe!2s81%20Rue%20des%20Moulins%2C%2021000%20Dijon%2C%20France!5e0!3m2!1sen!2smu!4v1655443666207!5m2!1sen!2smu" 
-              title="81 Rue des Moulins, 21000 Dijon, France"
-              width="100%" 
-              height="100%" 
-              allowFullScreen="" 
-              loading="lazy" 
-              border="none"
-              referrerPolicy="no-referrer-when-downgrade">
-            </iframe> */}
           </div>
           <div className="contact-container">
             <ToastContainer position="bottom-center" limit={1}/>
