@@ -45,7 +45,9 @@ $headerXxl: 160px;
 
 $navSliderXxl:  80vh;
 
-$footerXxl: 1300px;
+
+$footerXl: 990px;
+$footerXxl: 1120px;
 
 
 // Media Query : Responsive
@@ -66,6 +68,12 @@ $footerXxl: 1300px;
 //Tablette & Large phones
 @mixin mediaMd {
     @media screen and (min-width: 769px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin mediaLg{
+    @media screen and (min-width: 993px) and (max-width: 1366px) {
         @content;
     }
 }

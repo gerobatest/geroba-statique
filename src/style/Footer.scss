@@ -1,6 +1,26 @@
 @import "Variables.scss";
 @import "Commun.scss";
-
+//animation
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+}
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+@include keyframes(scrollUp) {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 .footer{ 
     margin-top: $paddingSectionLg !important;
     color: $grey;
@@ -116,17 +136,14 @@
                 }
             }
             .contact-info{
-                margin-top: 50px; //Variable 
+                margin-top: var(--contactInfo-marginTop, 0px); //Variable 
                 line-height:$lineheightLg; //VARIABLES
-                transition: 0.2s ease all;
-
                 p{
                     font-size: $fontsizeLg;
                 }
             }
         }
     }
-
     .footerRow2{
         p {
             text-align:center;
@@ -139,8 +156,6 @@
         }
     }
 }
-
-
 //Responsive
 //Smartphones 
 @include mediaXs{
@@ -155,7 +170,6 @@
             }
             .contact-container{
                 .title{
-                padding-top: 15px;
                 font-size: $titleSm; //titre responsive
                 } 
                 //Nom* et Prénom*
@@ -173,7 +187,6 @@
                 }
                 .contact-info{
                     line-height:$lineheightSm; //VARIABLES
-                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeSm;
                     }
@@ -184,7 +197,6 @@
             p {
                 padding: 10px 0px;
                 font-size:11px;
-
                 .footerLogo{
                 height: 20px;
                 }
@@ -192,7 +204,6 @@
         }
     }
 }
-
 //Portrait tablet and large phone
 @include mediaSm{
     .footer{
@@ -204,12 +215,6 @@
             .map{
                 height:450px;
             }
-            .contact-container{
-                .title{
-                    padding-top: 15px;
-                    font-size: $titleSm;
-                }
-            }
         }
         .footerRow2{
             p {
@@ -222,7 +227,6 @@
         }
     }
 }
-
 //Tablette & Large phone 
 @include mediaMd{
     .footer{
@@ -234,12 +238,6 @@
             .map{
                 height:450px;
             }
-            .contact-container{
-                .title{
-                    padding-top: 15px;
-                    font-size: $titleMd;
-                }
-            }
         }
         .footerRow2{
             p {
@@ -252,12 +250,11 @@
         }
     }
 }
-
 //Responsive
 @include mediaXl{
     .footer{
         .footerRow1{
-            height:1090px;
+            height: $footerXl;
             .map{
                 height:100%;
             }
@@ -266,9 +263,8 @@
                     font-size: $titleXl;
                 }
                 .contact-info{
-                    margin-top: 170px;
+                    margin-top: var(--contactInfo-marginTop, 0px); //Variable 
                     line-height:$lineheightXl; 
-                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeXl;
                     }
@@ -314,21 +310,18 @@
         }
     }
 }
-
 @include mediaXxl{
     .footer{
         .footerRow1{
             height: $footerXxl;
-
             .contact-container{
                 position: relative; 
                 .title{
                     font-size: $titleXl;
                 }
                 .contact-info{
-                    margin-top: 170px;
+                    margin-top: var(--contactInfo-marginTop, 0px); //Variable 
                     line-height:$lineheightXxl; 
-                    transition: 0.2s ease all;
                     p{
                         font-size: $fontsizeXxl;
                     }
@@ -358,7 +351,6 @@
                 .form-btn{
                     position: absolute;
                     right: 50px; 
-                    
                     button{
                         padding:15px 30px;
                         font-size:18px;  
@@ -377,12 +369,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
