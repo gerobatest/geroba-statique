@@ -4,19 +4,19 @@ const docData = [
     {
         id: uuidv4(),
         image : '/cover.png', 
-        name: 'Présentation', 
+        name: 'Document 1', 
         document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
         image : '/cover.png', 
         name: 'Note d\'installation', 
-        document: '/demo1.pdf'  
+        document: '/notes-d\'installations.pdf'  
     },
     {
         id: uuidv4(),
         image : '/cover.png', 
-        name: 'Geroba master', 
+        name: 'Document 3', 
         document: '/demo1.pdf'  
     },
     {
@@ -40,13 +40,13 @@ const docData = [
     {
         id: uuidv4(),
         image : '/cover.png', 
-        name: 'Document 4', 
+        name: 'Document 7', 
         document: '/demo1.pdf'  
     },
     {
         id: uuidv4(),
         image : '/cover.png', 
-        name: 'Document 5', 
+        name: 'Document 8', 
         document: '/demo1.pdf'  
     },
 

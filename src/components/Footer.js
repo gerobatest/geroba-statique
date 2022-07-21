@@ -96,6 +96,29 @@ function setMargin (newMargin){
   const submitHandler = async (e) => {
     e.preventDefault();
     try{
+      const {data} = await axios.post(`/send`, {
+        data: {
+          nom: formVal.name, 
+          prénom: formVal.fname,
+          email: formVal.email,
+          message: formVal.message
+        }
+      });
+      toast.success(data.message);
+    } catch(err){
+      toast.error(
+        err.response && err.response.data.message?
+        err.response.data.message: 
+        err.message
+      );
+    }
+  }
+
+
+/* Version PHP marche 
+   const submitHandler = async (e) => {
+    e.preventDefault();
+    try{
       const {info} = await axios({
         method: 'post',
         url: `http://localhost/sendmail/sendmail.php`,
@@ -121,7 +144,7 @@ function setMargin (newMargin){
         err.message
       );
     }
-  }
+  } */
 
 
   //Efface tous les champs 

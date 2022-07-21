@@ -1,5 +1,8 @@
 import React, {useRef} from 'react'
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import {BsDownload} from "react-icons/bs";
+import {AiOutlineDownload} from "react-icons/ai";
+import {HiOutlineDownload} from "react-icons/hi"
 import docData from './Document-data';
 import '../style/Doc.scss'
 
@@ -9,18 +12,15 @@ export default function Doc() {
   
   //const scrollHeight = scrollable.current?.clientHeight / 2;
   const scrollHeight = 250;
-  console.log(scrollHeight);
 
   const scrollUp = () => {
     const scrollLength = -scrollHeight; //calcul moitié de la div final
-    scrollable.current.scrollBy({top: scrollLength, behavior: "smooth"})
-    console.log(scrollHeight);
+    scrollable.current.scrollBy({top: scrollLength, behavior: "smooth"});
   }
 
   const scrollDown = () => {
     const scrollLength = scrollHeight; //calcul moitié de la div final
     scrollable.current.scrollBy({top: scrollLength, behavior: "smooth"})
-    console.log(scrollHeight);
   }
 
   return (
@@ -33,12 +33,13 @@ export default function Doc() {
             return(     
                 <div className="single-doc-container" id={index} key={index}>
                     
-                      <img src={slide.image} alt={slide.image}/>
+  
                     <a href={slide.document} target="_blank" rel="noopener noreferrer">
-                      <p className="doc-number">Document {index + 1}</p>
+                      <img src={slide.image} alt={slide.image}/>
+                      <p className="doc-name">{slide.name}</p> 
+                      <p className="download"><AiOutlineDownload/></p>
                     </a>
-                    
-                    <p className="doc-name">{slide.name}</p> 
+                    {/* <p className="download"><HiOutlineDownload/></p> */}
                 </div>    
             ) 
         })}

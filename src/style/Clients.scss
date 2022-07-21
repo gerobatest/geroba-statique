@@ -49,18 +49,19 @@
     } 
 }
 
-/*
-@include mediaXs{
+
+/*@include mediaXs{
     .cards{
-        height: 72.5px;
-        background: yellow;
+        height: 110px;
+        //background: yellow;
         .card{
-            padding:5px 0;
-            background: pink;
-            margin: 5px auto;
-            height: 72.5px;
+            padding:0 !important;
+            margin: 0 !important;
+            //background: pink;
+            object-fit: contain;
+            height: 110px;
             .clientLogo{
-                transform: scale(0.25);
+                transform: scale(0.3);
             }
         }
     }

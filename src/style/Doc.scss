@@ -19,6 +19,7 @@
     }
 
     button{
+        z-index:9;
         background:none;
         border:none;
         color:$white;
@@ -54,7 +55,8 @@
             filter: grayscale(100%);
         }
 
-        .doc-name, .doc-number{
+        .doc-name {
+            z-index: 9;
             position:absolute;
             width:100%;
             text-align:center;
@@ -65,27 +67,39 @@
             color: $orange;
         }
 
-        .doc-name{
-            display:none;
-
-            &:hover{
-                cursor: pointer;
-            }
+        .download{
+            z-index: 9;
+            position: absolute; 
+            width: 100%;
+            text-align: center;
+            bottom: 20%;
+            color: $orange; 
+            font-size: 40px;
         }
 
         &:hover{
-
-            .doc-name{
+            cursor: pointer;
+            .doc-name, .download{
+                font-weight: bold;
                 color: $white;
-                display: block;
+            }
+            .download{
+                font-size: 50px;
             }
             img{
-                filter : brightness(1.11) contrast(1.72) grayscale(0.03) hue-rotate(-182deg) invert(0.07) opacity(0.54);
+                filter:none;
             }
 
             .doc-number{
                 display:none;
             }
+        }
+        &:hover::after{
+            position: absolute;
+            content: "";
+            background: #F15a22;
+            inset: 0;
+            mix-blend-mode: multiply;
         }
     }
 }
@@ -100,6 +114,16 @@
         height:250px;
         .single-doc-container{
             width: 50%;
+            .download{
+                font-size: 30px;
+                bottom: 8%;
+            }
+    
+            &:hover{
+                .download{
+                    font-size: 40px;
+                }
+            }
         }
     }
 }
@@ -111,6 +135,16 @@
         .single-doc-container{
             height: 175px; 
             width: 33.33%;
+            .download{
+                font-size: 35px;
+                bottom: 12%;
+            }
+    
+            &:hover{
+                .download{
+                    font-size: 45px;
+                }
+            }
         }
     }
 }
@@ -118,18 +152,62 @@
 @include mediaMd{
     .doc-container{
         height:350px;
+        .single-doc-container{
+            height: 175px; 
+            width: 33.33%;
+            .download{
+                font-size: 35px;
+                bottom: 12%;
+            }
+    
+            &:hover{
+                .download{
+                    font-size: 45px;
+                }
+            }
+        }
     }
 }
 
 @include mediaXl{
     .doc-container{
-        height:650px;
+        height:670px;
+        .single-doc-container{
+            .doc-name{
+                font-size:30px;
+            }
+            .download{
+                font-size: 50px;
+                bottom: 18%;
+            }
+    
+            &:hover{
+                .download{
+                    font-size: 60px;
+                }
+            }
+        }
     }
 }
 
 @include mediaXxl{
     .doc-container{
-        height:750px;
+        height:880px;
+        .single-doc-container{
+            .doc-name{
+                font-size:40px;
+            }
+            .download{
+                font-size: 55px;
+                bottom: 18%;
+            }
+    
+            &:hover{
+                .download{
+                    font-size: 65px;
+                }
+            }
+        }
     }
 
     button{
