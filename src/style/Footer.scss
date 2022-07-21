@@ -105,7 +105,7 @@
                     padding:6px 16px;
                     border-radius:3px;
                     opacity:1;
-                    //transition: all 3s ease-in-out;;
+                    transition: all 1.2s ease-in;
                 }
                 button:hover{
                     cursor:pointer;
@@ -121,6 +121,7 @@
             .contact-info{
                 margin-top: var(--contactInfo-marginTop, 0px); //Variable 
                 line-height:$lineheightLg; //VARIABLES
+                transition: all 1.2s ease-in-out;
                 p{
                     font-size: $fontsizeLg;
                 }
