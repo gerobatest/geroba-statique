@@ -4,13 +4,14 @@
 .slider{
   width:100%;
   height: 100vh;
+  max-height: 1306px;
   position: relative;
   overflow: hidden;
 
   .textslide{
       position: absolute;
-      right: 450px;
-      bottom: 100px;
+      right: 30%;
+      bottom: 18%;
       width:100px;
       line-height:80px;
 
@@ -23,7 +24,7 @@
 
   .container-dots {
       position: absolute;
-      bottom: 30px;
+      bottom: 8%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -105,18 +106,15 @@
 @include mediaXs{
   .slider{
     transform: translateY(75px);
-    height:50vh;
+    height:35vh;
     .textslide{
-      right: 60px;
-      bottom: 70px;
       width:100px;
-      line-height:30px;
+      line-height:35px;
       h1{
-        font-size:25px; /*TBD*/
+        font-size:35px; /*TBD*/
       }    
     }
     .container-dots {
-      bottom: 25px;
       left: 50%;
       .dot {
           width: 12px;
@@ -132,8 +130,6 @@
     transform: translateY(55px);
     height:55vh;
     .textslide{
-      right: 230px;
-      bottom: 90px;
       width:100px;
       line-height:60px;
       h1{
@@ -141,7 +137,6 @@
       }    
     }
     .container-dots {
-      bottom: 35px;
       left: 50%;
     } 
   }
@@ -174,8 +169,6 @@
   .slider{
     .textslide{
       position: absolute;
-      right: 600px;
-      bottom: 200px;
       width:100px;
       line-height:100px;
       h1{
@@ -183,7 +176,6 @@
       }    
     }
     .container-dots{
-      bottom:85px;
       .dot{
         width: 23px;
         height: 23px;
@@ -195,11 +187,9 @@
 @include mediaXxl{
   .slider{
     width:100%;
-    height: $navSliderXxl;
+    //height: $navSliderXxl;
     .textslide{
       position: absolute;
-      right: 900px;
-      bottom: 280px;
       width:100px;
       line-height:185px;
       h1{
@@ -207,7 +197,6 @@
       }    
     }
     .container-dots{
-      bottom:125px;
       .dot{
         width: 30px;
         height: 30px;
