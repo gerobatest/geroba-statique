@@ -125,6 +125,11 @@
                 p{
                     font-size: $fontsizeLg;
                 }
+
+                a{
+                    text-decoration: none;
+                    color: $grey;
+                }
             }
         }
     }
@@ -253,7 +258,7 @@
                     margin-left:0;
                 }
                 .contact-info{
-                    line-height:$lineheightSm; //VARIABLES
+                    line-height:$lineheightSm; 
                     p{
                         font-size: $fontsizeSm;
                     }
@@ -338,6 +343,7 @@
         }
     }
 }
+
 //Responsive
 @include mediaXl{
     .footer{
