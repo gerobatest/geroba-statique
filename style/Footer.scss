@@ -125,6 +125,11 @@
                 p{
                     font-size: $fontsizeLg;
                 }
+
+                a{
+                    text-decoration: none;
+                    color: $grey;
+                }
             }
         }
     }
@@ -338,6 +343,7 @@
         }
     }
 }
+
 //Responsive
 @include mediaXl{
     .footer{
