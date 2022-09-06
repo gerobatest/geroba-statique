@@ -3,9 +3,7 @@
 
 .scroll-container{
     position:relative;
-    //width: 95%;
-    margin:0px auto;
-
+    //margin:0px auto;
     .scroll-up{
         position:absolute;
         top:10px;
@@ -36,9 +34,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 500px;
-    margin:0px auto;
-    
-    background: $grey;
     //overflow:scroll; //Si utilisé, on peut scroller les images manuellement
     overflow:hidden;
 
@@ -46,7 +41,6 @@
         height: 50%; 
         width: 33.33%;
         position: relative;
-
         img{
             width: 100%;
             height: 100%;
@@ -54,7 +48,6 @@
             -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
             filter: grayscale(100%);
         }
-
         .doc-name {
             z-index: 9;
             position:absolute;
@@ -66,7 +59,6 @@
             transform: translateY(-50%);
             color: $orange;
         }
-
         .download{
             z-index: 9;
             position: absolute; 
@@ -76,7 +68,6 @@
             color: $orange; 
             font-size: 40px;
         }
-
         &:hover{
             cursor: pointer;
             .doc-name, .download{
@@ -89,15 +80,12 @@
             img{
                 filter:none;
             }
-
-            .doc-number{
-                display:none;
-            }
         }
+        
         &:hover::after{
             position: absolute;
             content: "";
-            background: #F15a22;
+            background: $orange;
             inset: 0;
             mix-blend-mode: multiply;
         }
@@ -118,7 +106,6 @@
                 font-size: 30px;
                 bottom: 8%;
             }
-    
             &:hover{
                 .download{
                     font-size: 40px;
@@ -131,7 +118,6 @@
 @include mediaSm{
     .doc-container{
         height:325px;
-    
         .single-doc-container{
             height: 175px; 
             width: 33.33%;
@@ -139,7 +125,6 @@
                 font-size: 35px;
                 bottom: 12%;
             }
-    
             &:hover{
                 .download{
                     font-size: 45px;
@@ -159,7 +144,6 @@
                 font-size: 35px;
                 bottom: 12%;
             }
-    
             &:hover{
                 .download{
                     font-size: 45px;
@@ -172,15 +156,12 @@
 @include mediaXl{
     .doc-container{
         height:670px;
+        height: 80vh;
         .single-doc-container{
-            .doc-name{
-                font-size:30px;
-            }
             .download{
                 font-size: 50px;
                 bottom: 18%;
             }
-    
             &:hover{
                 .download{
                     font-size: 60px;
@@ -194,14 +175,10 @@
     .doc-container{
         height:880px;
         .single-doc-container{
-            .doc-name{
-                font-size:40px;
-            }
             .download{
                 font-size: 55px;
                 bottom: 18%;
             }
-    
             &:hover{
                 .download{
                     font-size: 65px;
@@ -209,7 +186,6 @@
             }
         }
     }
-
     button{
         font-size:35px;
     }

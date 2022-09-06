@@ -14,13 +14,13 @@
 
 //Flèches personalisées 
 .slick-next {
-    background: url('../images/right-arrow.svg') center center no-repeat!important;
+    background: url('../images/right-arrow.svg') center center no-repeat !important;
     &::before {
       display: none;
     }
 }
 .slick-prev {
-    background: url('../images/left-arrow.svg') center center no-repeat!important;
+    background: url('../images/left-arrow.svg') center center no-repeat !important;
     &::before {
         display: none;
     }
@@ -39,34 +39,24 @@
 
     .card{
         padding:10px 0px;
-        margin: auto 20px;
+        margin: 0 auto;
         height: 145px;
+
+        position: relative;
+        justify-content: center;
 
         .clientLogo{ //fit the image 
             display: block;
-            position:relative;
+            position: absolute;
+            margin: auto; //ajout
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
     } 
 }
-
-
-/*@include mediaXs{
-    .cards{
-        height: 110px;
-        //background: yellow;
-        .card{
-            padding:0 !important;
-            margin: 0 !important;
-            //background: pink;
-            object-fit: contain;
-            height: 110px;
-            .clientLogo{
-                transform: scale(0.3);
-            }
-        }
-    }
-}*/
-    
+ 
 
 
 
